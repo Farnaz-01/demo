@@ -7,6 +7,22 @@
 </head>
 <body>
     <h2 id="hi">Hello Javasript</h2>
-    <script src="script.js"></script>
+    <h2 id ="drm">You can never get back today<h2>
+   <script>
+
+console.log('\n')
+let apnd = " from Apna College students ";
+let hed2 = document.getElementById("hi")
+let be=document.getElementById('drm')
+console.log(hed2.append(apnd))
+
+be.innerHTML = be.innerHTML + " So make the most of it"
+
+be.style.backgroundColor = "yellow"
+
+be.style.fontFamily="cursive"
+
+    </script>
+
 </body>
 </html>

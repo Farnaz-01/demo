@@ -1,5 +1,12 @@
+console.log('\n')
 let apnd = " from Apna College students ";
 let hed2 = document.getElementById("hi")
+let be=document.getElementById('drm')
 console.log(hed2.append(apnd))
-consoleLOC
-hed2.innerText = hed2.innerText + " from Apna College students";
+//console.log(apnd)
+
+//be.innerText=be.innerText+", from my Home"
+
+
+
+
