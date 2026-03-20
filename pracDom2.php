@@ -8,24 +8,29 @@
 </head>
 <body>
 
-<div id=f1>
-<div class=box> first div </div>
-<div class=box> second div </div>
-<div class=box>  third div</div>
+<div id="f1">
+  <div class="box"> first div </div>
+  <div class="box"> second div </div>
+  <div class="box"> third div </div>
 
-
-<div class=try> first div </div>
-<div class=try> second div </div>
-<div class=try>  third div</div>
+  <div class="try"> first div </div>
+  <div class="try"> second div </div>
+  <div class="try"> third div </div>
+</div>
 
 <script>
-//let box = document.gebcn("box")
-let box1 =document.getElementByClassName("box")
+  let boxS = document.getElementsByClassName("box");
+  boxS[0].innerText = "This is the first div";
+  boxS[1].innerHTML = "This is the second div";
+  boxS[2].innerHTML = "This is the third div";
 
-box1[0].innerText = "This is the first div"
-box[1].innerHTML = "This is the second div" 
-box[2].innerHTML = "This is the third div"
-</div>
+ let tr = document.getElementsByClassName("try");
+ for (let element of tr) {
+        element.innerText += " , how are you?";
+    }
+
+    tr[2].innerHTML="In the Grace and Mercy"
+
 </script>
 
 
