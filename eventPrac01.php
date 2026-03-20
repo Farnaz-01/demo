@@ -20,6 +20,10 @@ Then death comes like dawn,
 and you wake up laughing
 <br>
 at what you thought was your grief.</div>
+<div id="rio" onmouseover="console.log('You cannot hide from me Div.'); alert('Ramadan Kareem <3 !!')">My box </div>
+
+
+<button ondblclick="console.log('button clicked 2 times'); alert('Have Patience!!');">Click 2 times</button>
 
     <script src="script02.js"></script>
 
