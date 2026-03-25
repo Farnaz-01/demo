@@ -1,0 +1,23 @@
+body{
+    
+    background-color: rgb(0, 116, 77);
+}
+
+
+#dear{
+    background-color: coral;
+    border: 3px solid brown;
+    height: 250px;
+    width: 400px;
+}
+
+#rio{
+
+    height: 100px;
+    width: 100px;
+    background-color: rgb(131, 222, 222);
+    border: 3px solid rgb(13, 84, 100);
+    margin: 0px;
+    padding : 10px;
+    text-align: center;
+}
