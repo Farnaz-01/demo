@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: 50px auto;
+            width: 600px;
+            padding: 20px;
+            border: 4px dotted darkblue;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 6px;
+        }
+
+        button {
+            background-color: cadetblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>University Registration Form</h1>
+
+<form action="#" method="post" enctype="multipart/form-data">
+
+<table>
+
+<tr>
+    <td>Name:</td>
+    <td><input type="text" name="name" placeholder="Enter Your Name" required></td>
+</tr>
+
+<tr>
+    <td>School:</td>
+    <td><input type="text" name="school"></td>
+</tr>
+
+<tr>
+    <td>Date & Time:</td>
+    <td><input type="datetime-local" name="datetime"></td>
+</tr>
+
+<tr>
+    <td>File:</td>
+    <td><input type="file" name="file"></td>
+</tr>
+
+<tr>
+    <td>Month of Study:</td>
+    <td><input type="month" name="month"></td>
+</tr>
+
+<tr>
+    <td>Password:</td>
+    <td><input type="password" name="password" required></td>
+</tr>
+
+<tr>
+    <td>Volume Range:</td>
+    <td><input type="range" name="volume" min="0" max="100" value="50"></td>
+</tr>
+
+<tr>
+    <td>Search:</td>
+    <td><input type="search" name="search"></td>
+</tr>
+
+<tr>
+    <td>Phone Number:</td>
+    <td><input type="tel" name="phone"></td>
+</tr>
+
+<tr>
+    <td>Alarm Time:</td>
+    <td><input type="time" name="alarm"></td>
+</tr>
+
+<tr>
+    <td>Website Link:</td>
+    <td><input type="url" name="website" placeholder="https://google.com"></td>
+</tr>
+
+<tr>
+    <td>Email Address:</td>
+    <td><input type="email" name="email" required></td>
+</tr>
+
+<tr>
+    <td>Age:</td>
+    <td><input type="number" name="age" min="1"></td>
+</tr>
+
+<tr>
+    <td>Date of Birth:</td>
+    <td><input type="date" name="dob"></td>
+</tr>
+
+<tr>
+<td>Blood Group :</td>
+<td>
+<select required>
+<option value="">--Select--</option>
+<option>A +ve</option>
+<option>B +ve</option>
+<option>O +ve</option>
+<option>AB +ve</option>
+<option>A -ve</option>
+<option>B -ve</option>
+<option>O -ve</option>
+<option>AB -ve</option>
+
+</select>
+</td>
+</tr>
+<tr>
+    <td>Department:</td>
+    <td>
+        <input type="radio" name="department" value="CSE"> CSE
+        <input type="radio" name="department" value="IPE"> IPE
+        <input type="radio" name="department" value="EEE"> EEE
+        <input type="radio" name="department" value="BBA"> BBA
+    </td>
+</tr>
+
+<tr>
+    <td>Programming Skills:</td>
+    <td>
+        <input type="checkbox" name="skills[]" value="C++"> C++
+        <input type="checkbox" name="skills[]" value="Java"> Java
+        <input type="checkbox" name="skills[]" value="Python"> Python
+        <input type="checkbox" name="skills[]" value="C#"> C#
+    </td>
+</tr>
+
+<tr>
+    <td>Favourite Color:</td>
+    <td><input type="color" name="color"></td>
+</tr>
+
+<tr>
+    <td>Photo:</td>
+    <td><input type="file" name="photo" accept="image/*"></td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <button type="submit">Submit</button>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <input type="reset">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
