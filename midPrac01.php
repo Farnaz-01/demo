@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Practice Form</title>
-    <link rel="stylesheet" href="styleForm.css">
+    <link rel="stylesheet" href="sform.css">
 </head>
 <body>
 
@@ -10,65 +10,64 @@
 
 <form>
 
-    <!-- Text -->
-    First Name: <input type="text" id="fn"><br><br>
-    Last Name: <input type="text" id="ln"><br><br>
+    
+    Name: <input type="text" id="name" minlength="2" maxlength ="50" ><br><br>
+    
 
-    <!-- Dropdown -->
+    
     Department:
     <select id="dept">
         <option value="">Select</option>
         <option value="CSE">CSE</option>
         <option value="EEE">EEE</option>
-        <option value="IPE">IPE</option>
     </select><br><br>
 
-    <!-- Radio -->
+    
     Gender:
     <input type="radio" name="gender" value="Male"> Male
     <input type="radio" name="gender" value="Female"> Female
     <br><br>
 
-    <!-- Checkbox -->
+    
     Skills:
     <input type="checkbox" name="skill" value="HTML"> HTML
     <input type="checkbox" name="skill" value="CSS"> CSS
     <input type="checkbox" name="skill" value="JS"> JavaScript
     <br><br>
 
-    <!-- Date -->
+    
     Date of Birth:
     <input type="date" id="dob"><br><br>
 
-    <!-- Number -->
+    
     Age:
-    <input type="number" id="age"><br><br>
+    <input type="number" id="age" min=14 max=18><br><br>
 
     Email:
-    <input type="email" placeholder="Enter your email"><br> <br>
+    <input type="email" id="mail"  placeholder="Enter your email"><br> <br>
 
     Password:
-    <input type="password" placeholder="Enter your password"><br> <br>
+    <input type="password" id="pass"  placeholder="Enter your password"><br> <br>
 
-    <!-- Checkbox (single) -->
+    
     <input type="checkbox" id="agree"> I agree to terms<br><br>
 
-    <!-- Button -->
+    
     <button type="button" id="btn">Submit</button>
 
 </form>
 
 <script>
-document.getElementById("btn").addEventListener("click", function(){
+var btn = document.getElementById("btn");
+btn.addEventListener("click", ()=>{
 
-    // Text
-    var fname = document.getElementById("fn").value;
-    var lname = document.getElementById("ln").value;
-
-    // Dropdown
+    
+    var name = document.getElementById("name").value;
+    
+    
     var dept = document.getElementById("dept").value;
 
-    // Radio
+    
     var genderList = document.getElementsByName("gender");
     var gender = "";
     for(var i = 0; i < genderList.length; i++){
@@ -77,7 +76,7 @@ document.getElementById("btn").addEventListener("click", function(){
         }
     }
 
-    // Checkbox (multiple)
+    
     var skillList = document.getElementsByName("skill");
     var skills = [];
     for(var i = 0; i < skillList.length; i++){
@@ -86,27 +85,31 @@ document.getElementById("btn").addEventListener("click", function(){
         }
     }
 
-    // Date
+    
     var dob = document.getElementById("dob").value;
 
-    // Number
+    
     var age = document.getElementById("age").value;
 
-    // Checkbox (single)
+    var mail = document.getElementById("mail").value;
+    var pass = document.getElementById("pass").value;
+
     var agree = document.getElementById("agree").checked;
 
-    // Validation
-    if(fname === "" || lname === "" || dept === "" || gender === "" || skills.length === 0 || dob === "" || age === "" || !agree){
+   
+    if(name === ""  || dept === "" || gender === "" || skills.length === 0 || dob === "" || age === "" || !agree || mail==="" || pass===""){
         alert("Please fill all fields properly!");
     } else {
         alert(
             "Success!\n\n" +
-            "Name: " + fname + " " + lname + "\n" +
+            "Name: " + name + "\n" +
             "Department: " + dept + "\n" +
             "Gender: " + gender + "\n" +
             "Skills: " + skills.join(", ") + "\n" +
             "DOB: " + dob + "\n" +
-            "Age: " + age
+            "Age: " + age + "\n" +
+            "Email: "+mail + "\n" +
+            "Password: " + pass
         );
     }
 
